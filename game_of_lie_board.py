@@ -6,7 +6,7 @@ import numpy as np
 import time
 
 
-BLOCK_SIZE = 50
+BLOCK_SIZE = 10
 
 
 def check_overlap(list1, val):
@@ -99,7 +99,7 @@ pygame.display.set_mode((width, height))
 board = np.zeros((int(height/BLOCK_SIZE),int(height/BLOCK_SIZE)), dtype=bool)
 
 # set up a random ititial state
-number_of_blocks = random.randint(15, 15)
+number_of_blocks = random.randint(200, 200)
 x_block_locs = collections.deque(number_of_blocks * [0], number_of_blocks)
 y_block_locs = collections.deque(number_of_blocks * [0], number_of_blocks)
 screen.fill((255, 255, 255))
